@@ -1,6 +1,7 @@
-import { strict } from "assert";
+
 import mongoose, { STATES, mongo } from "mongoose";
-import { stringify } from "querystring";
+
+
 
 const userSchema = new mongoose.Schema({
     username:{
@@ -12,6 +13,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     }, 
+    password: {
+        type: String,
+        required: true,
+      },
 }, {timestamps:true}
 );
 
