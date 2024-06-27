@@ -121,6 +121,8 @@ export default function DashProfile() {
       setUpdateUserError(error.message);
     }
   };
+
+  
   const handleDeleteUser = async () => {
     setShowModal(false);
     try {
@@ -267,11 +269,7 @@ export default function DashProfile() {
         </Alert>
       )}
       <Modal
-        show={showModal}
-        onClose={() => setShowModal(false)}
-        popup
-        size='md'
-      >
+        show={showModal} onClose={() => setShowModal(false)} popupsize='md'>
         <Modal.Header />
         <Modal.Body>
           <div className='text-center'>
