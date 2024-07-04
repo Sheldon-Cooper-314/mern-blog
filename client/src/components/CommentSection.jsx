@@ -18,6 +18,7 @@ export default function CommentSection({ postId }) {
     if (comment.length > 200) {
       return;
     }
+    
     try {
       const res = await fetch('/api/comment/create', {
         method: 'POST',

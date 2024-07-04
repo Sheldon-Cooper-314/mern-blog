@@ -37,6 +37,23 @@ export default function PostPage() {
         fetchPost();
     }, [postSlug]);
 
+    useEffect(() => {
+        try {
+          const fetchRecentPosts = async () => {
+            const res = await fetch(`/api/post/getposts?limit=3`);
+            const data = await res.json();
+            if (res.ok) {
+              setRecentPosts(data.posts);
+            }
+          };
+          fetchRecentPosts();
+        } catch (error) {
+          console.log(error.message);
+        }
+      }, []);
+
+
+
     if (loading)
         return (
             <div className='flex justify-center items-center min-h-screen'>
