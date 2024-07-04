@@ -20,7 +20,6 @@ const userSchema = new mongoose.Schema({
       profilePicture: {
         type: String,
         defualt: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLM5cw_X6MIlgT5nPHiuijlDBSO5SpN8P3w&s",
-
       },
       isAdmin:{
         type: Boolean,
